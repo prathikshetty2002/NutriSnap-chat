@@ -28,7 +28,6 @@ const { title } = Astro.props;
     <slot />
   </body>
 </html>
-
 <style is:global>
   :root {
     --c-bg: #fbfbfb;
@@ -42,6 +41,8 @@ const { title } = Astro.props;
     font-family: system-ui, sans-serif;
     background-color: var(--c-bg);
     color: var(--c-fg);
+    /* Apply backdrop filter for blur effect */
+    backdrop-filter: blur(8px);
   }
 
   html.dark {
@@ -100,6 +101,7 @@ const { title } = Astro.props;
     z-index: 1;
   }
 </style>
+
 
 <script>
 const initTheme = () => {
